@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Colored Box</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+* {
+box-sizing: border-box;
+}
+.box{
+display: inline-block;
+padding: 5px;
+}
+body {
+margin: 20px;
+font-family: calibri;
+text-align: center;
+}
+.box1 {
+width: 50px;
+height: 50px;
+margin-bottom: 20px;
+background: #FF7F50;
+margin: 0 auto 20px auto;
+}
+.box2 {
+width: 50px;
+height: 50px;
+margin-bottom: 20px;
+background: #6495ED;
+margin: 0 auto 20px auto;
+}
+.box3 {
+width: 50px;
+height: 50px;
+margin-bottom: 20px;
+background: #FFF8DC;
+margin: 0 auto 20px auto;
+}
+.box4 {
+width: 50px;
+height: 50px;
+margin-bottom: 20px;
+background: #DC143C;
+margin: 0 auto 20px auto;
+}
+.box5 {
+width: 50px;
+height: 50px;
+margin-bottom: 20px;
+background: #00FFFF;
+margin: 0 auto 20px auto;
+}
+.box5 {
+width: 50px;
+height: 50px;
+margin-bottom: 20px;
+background: #00008B;
+margin: 0 auto 20px auto;
+}
+.box6 {
+width: 50px;
+height: 50px;
+margin-bottom: 20px;
+background: #008B8B;
+margin: 0 auto 20px auto;
+}
+.box7 {
+width: 50px;
+height: 50px;
+margin-bottom: 20px;
+background: #B8860B;
+margin: 0 auto 20px auto;
+}
+.box8 {
+width: 50px;
+height: 50px;
+margin-bottom: 20px;
+background: #006400;
+margin: 0 auto 20px auto;
+}
+.box9 {
+width: 50px;
+height: 50px;
+margin-bottom: 20px;
+background:	#B22222;
+margin: 0 auto 20px auto;
+}
+.box10 {
+width: 50px;
+height: 50px;
+margin-bottom: 20px;
+background: #E9967A;
+margin: 0 auto 20px auto;
+}
+.box11 {
+width: 50px;
+height: 50px;
+margin-bottom: 20px;
+background:	#FF1493;
+margin: 0 auto 20px auto;
+}
+.box12 {
+width: 50px;
+height: 50px;
+margin-bottom: 20px;
+background: #9400D3;
+margin: 0 auto 20px auto;
+}
+
+/*.box:hover > *:not(:hover) {
+width: 25px;
+height: 25px;
+}
+.box:hover > *:hover {*/
+/*z-index: 1;*/
+/*left: 100px;*/
+/*}*/
+/*.box:hover > * {
+width: 100px;
+height: 100px;
+
+}*/
+/*.box1:hover ~ div {
+width: 100px;
+height: 100px;
+}*/
+/*.box1 {
+
+position: relative;
+animation: mymove 10s infinite;
+}*/
+@keyframes mymove {
+0% {left: 0px;transform: rotate(0deg);}
+25% {left: 200px;transform: rotate(180deg);}
+75% {left: 200px;transform: rotate(180deg);}
+100% {left:200px;transform: rotate(180deg);}
+}
+
+@keyframes mymoves {
+0% {left: 0px;transform: rotate(0deg);}
+25% {left: -200px;transform: rotate(180deg);}
+75% {left: -200px;transform: rotate(180deg);}
+100% {left:-200px;transform: rotate(180deg);}
+}
+
+* {
+transition: 0.5s ease all;
+}
+
+.animate2{
+width: 25px;
+height: 25px;
+position: relative;
+/*right: -200px;*/
+animation: mymoves 10s ;
+ animation-fill-mode: forwards; 
+}
+
+.animate{
+width: 100px;
+height: 100px;
+position: relative;
+/*right: -200px;*/
+animation: mymove 10s ;
+animation-fill-mode: forwards; 
+}
+</style>
+</head>
+<body>
+<section class="box">
+
+<div class="box1">
+
+</div>
+<div class="box2">
+
+</div>
+<div class="box3">
+
+</div>
+<div class="box4">
+
+</div>
+<div class="box5">
+
+</div>
+<div class="box6">
+
+</div>
+<div class="box7">
+
+</div>
+<div class="box8">
+
+</div>
+<div class="box9">
+
+</div>
+<div class="box10">
+
+</div>
+<div class="box11">
+
+</div>
+<div class="box12">
+
+</div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+	var count=0;
+$(".box div").mouseenter(function(){
+	
+	if (count == 0) {
+	$(this).addClass("animate");
+	$(this).siblings().addClass("animate2");
+	count=1;
+	}
+});
+
+</script>
+
+
+</body>
+</html>
